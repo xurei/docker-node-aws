@@ -1,5 +1,5 @@
-FROM node:9.11.2-alpine
- 
+FROM node:10.15.3-alpine
+
 RUN echo $'\
 http://dl-cdn.alpinelinux.org/alpine/v3.8/main\n\
 http://dl-cdn.alpinelinux.org/alpine/v3.8/community' > /etc/apk/repositories && \
@@ -10,4 +10,3 @@ http://dl-cdn.alpinelinux.org/alpine/v3.8/community' > /etc/apk/repositories && 
     pip install awscli && \
     apk --purge -v del py-pip && \
     rm /var/cache/apk/*
-    
